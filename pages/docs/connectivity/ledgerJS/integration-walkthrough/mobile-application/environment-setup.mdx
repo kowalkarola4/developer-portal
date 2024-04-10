@@ -46,7 +46,7 @@ Make sure you have all of the following:
 
 ### Development Environment
 
-#### Android Studio
+#### Android Studio (for Android Apps only)
 
 Download and install [Android Studio](https://developer.android.com/studio).
 Choose the right version for your operating system.
@@ -56,22 +56,22 @@ When Android Studio is installed, open it.
 ![Android Studio Window](/connectivity/android-studio.png)
 *Fig. 1: Android Studio Window*
 
-Go to Settings => Appearance & Behaviour => System Settings => Android SDK
+In the menu bar, go to Android Studio => Settings => Language & Framework => Android SDK
 Check the "Show Package Details" checkbox on the bottom right of the windows.
 
 ![Android Studio Settings](/connectivity/android-studio-settings.png)
 *Fig. 2: Android Studio Settings*
 
-Install the latest SDK version. Select the packages shown below and click apply.
+Install the latest SDK version. Select the packages shown below and click Apply.
 
 ![Android Studio SDK Settings](/connectivity/android-studio-SDK.png)
 *Fig. 3: Android Studio SDK Settings*
 
-#### Xcode
+#### Xcode (for iOS Apps only)
 
 To develop an iOS application we have to install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) via the Mac App Store.
 
-When the installation is complete, open Xcode then go to Settings => Locations.
+When the installation is complete, open Xcode then go to Code => Settings => Locations.
 
 ![Xcode Settings](/connectivity/Xcode-settings.png)
 *Fig. 1: Xcode Settings*
@@ -87,21 +87,27 @@ sudo gem install cocoapods
 ```
 
 
-### Install Homebrew
+### Install Homebrew (for Android and iOS Apps)
 Homebrew is a package manager for macOS. When it needs to install software from third-party websites. To install it, run:
 
 ```console copy
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 ```
 
-### Install Watchman
+or update and upgrade
+```console copy
+brew update
+brew upgrade
+```
+
+### Install Watchman (for Android and iOS Apps)
 React Native uses watchman to detect real-time code changes and it automatically builds and pushes the update to your device without manually refreshing.
 
 ```console copy
 brew install watchman
 ```
 
-### Install Java JRE and JDK
+### Install Java JRE and JDK (for Android and iOS Apps)
  There is a risk of react-native build failure if you don’t have a complete installation of Java. Downloading Android Studio is not enough since it comes bundled with its own JRE.
 
 ```console copy
@@ -109,7 +115,7 @@ brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 ```
 
 
-### Install React Native
+### Install React Native (for Android and iOS Apps)
 With React Native, you can write an application in Javascript and then the React Native Compiler will convert your Javascript code into native code for iOS and Android environments.
 React Native command line interface can be installed using npm as below.
 
